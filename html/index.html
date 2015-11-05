@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Hello world</title>
+
+    <link rel="stylesheet" href="http://solarized.skilstak.io/colors-solarized.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lovers+Quarrel' rel='stylesheet' type='text/css'>
+
+    <style>
+      body {
+        font-family: "Helvetica","Arial",sans-serif;
+        font-size: 400%;
+        font-weight: bold;
+        color: grey;
+      }
+
+      #h { color: goldenrod; }
+      #w { color: magenta; }
+
+      .couplet {
+        font-family: "Lovers Quarrel";
+        margin-left: 2em;
+        font-weight: normal;
+      }
+
+      .fat {
+        font-weight: bold;
+      }
+
+      #output {
+        font-weight: normal;
+      }
+
+    </style>
+  </head>
+
+  <body class="base03bg">
+
+    <p>
+      <span id="h">Hello</span>
+      <span style="color: red;">there</span>
+      <span id="w">world!</span>
+    </p>
+
+    <p class="couplet">
+      Roses are red,<br>
+      Violets are blue.
+    </p>
+
+    <p class="couplet fat">
+      Jaws 19 is coming,<br>
+      So come scream soon.
+    </p>
+
+    <p id="output">
+      <script>
+        console.log("Hello there console.");
+        document.write(document.lastModified);
+      </script>
+    </p>
+
+  </body>
+
+</html>
+
