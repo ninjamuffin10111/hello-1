@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Hello world!</title>
+    <link rel="stylesheet" href="http://solarized.skilstak.io/colors-solarized.min.css">
+    <style>
+      body {
+        font-family: "Helvetica", "Arial", sans-serif;
+        font-size: 300%;
+        background: #002B36;
+        color: grey;
+      }
+      .fat { font-weight: bold; }
+      #h { color: goldenrod; }
+      #w { color: magenta; }
+    </style>
+  </head>
+
+  <body>
+
+    <p class="fat">
+      <span id="h">Hello</span>
+      <span style="color: red;">there</span>
+      <span id="w">world!</span>
+    </p>
+
+    <p>
+      <div id="name" contenteditable>???!</div>
+    </p>
+    
+    <script>
+        var w = document.querySelector("#w");
+        var n = document.getElementById("name");
+        w.textContent = n.textContent;
+        n.addEventListener("input", function () {
+          w.textContent = n.textContent;
+        }, false);
+    </script>
+
+  </body>
+
+</html>
