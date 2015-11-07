@@ -20,8 +20,7 @@ that use Gradle to handle task management for larger projects.
 The `bin/make` is named the same as the UNIX utility `make` to get
 you in the habit of simply typing `make`. Indeed `make` is a much
 simpler task management tool if you can get away with using it.
-Usually most Java project use Gradle and Maven because Java is often
-developed on Windows machines in addition to Mac and Linux, (which
-just supports our conclusion that it is a horrible language that
-you still just have to learn).
+Usually most Java projects use Gradle and Maven (or Ant for older
+projects) because Java is often developed on Windows machines in
+addition to Mac and Linux.
 
