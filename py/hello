@@ -23,8 +23,7 @@ def color(message):
 
 if __name__ == '__main__':
     import sys
-    print(sys.argv)
-    
+
     who = "world"
     option = ""
     message = ""

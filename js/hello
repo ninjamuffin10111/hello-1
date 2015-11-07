@@ -2,12 +2,54 @@
 
 'use strict';
 
+// old school, use process.stdout instead
 //console.log("Hello world");
 
 var c = require("skilstak-colors");
 var out = process.stdout;
 
-out.write(c.clear);
-while (true) {
-  out.write(c.rc() + "Hello world " + c.x);
+var plain = function (message) {
+  out.write(c.clear + message);  
+}
+
+var color = function (message) {
+  while (true) {
+    out.write(c.rc() + message + ' ' + c.x);
+  }
+}
+
+var multi = function (message) {
+  while (true) {
+    out.write(c.clear + c.multi(message + " "));
+    out.write("\n");
+    // TODO implement setInterval sleep
+  }
+}
+
+var who = "world";
+var option = "";
+var message = "";
+
+if (process.argv.length > 3) {
+  option = process.argv[2];
+  who = process.argv[3];
+} else if (process.argv.length == 3) {
+  if (process.argv[2][0] == "-") {
+    option = process.argv[2];
+  } else {
+    who = process.argv[2];
+  }
+}
+
+message = "Hello " + who + "!";
+
+// could do this more directly with reflection or an arg
+// parser, but keeping is simple for now
+
+if (option === "-m") {
+  multi(message)
+} else if (option === "-c") {
+  color(message);
+} else {
+  plain(message);
 }
