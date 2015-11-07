@@ -21,21 +21,34 @@ def color(message):
     while True:
         print(c.rc() + message + c.reset, end=" ")
 
-def hello(kind='plain',message='Hello world!'):
-    """Main 'Hello world' function"""
-    try:
-        if kind == 'color':
-            color(message)
-        elif kind.startswith('m'):
-            multi(message)
-        else:
-            plain(message)
-    except KeyboardInterrupt:
-        return
-
 if __name__ == '__main__':
     import sys
-    if len(sys.argv) == 1:
-        hello()
-    else:
-        hello(sys.argv[1])
+    print(sys.argv)
+    
+    who = "world"
+    option = ""
+    message = ""
+
+    if len(sys.argv) > 2:
+        option = sys.argv[1]
+        who = sys.argv[2]
+    elif len(sys.argv) == 2:
+        if sys.argv[1].startswith("-"):
+            option = sys.argv[1]
+        else:
+            who = sys.argv[1];
+
+    message = "Hello " + who + "!";
+
+    # could do this more directly with reflection or an arg
+    # parser, but keeping is simple for now
+      
+    try:
+        if option == "-m":
+            multi(message)
+        elif option == "-c":
+            color(message);
+        else:
+            plain(message);
+    except KeyboardInterrupt:
+        exit()
