@@ -1,5 +1,10 @@
 # Hello Java
 
+First let's be clear, there are many other better programming
+languages for creating command line programs. Java is the worst of
+the modern language options. (Golang or Python are practically
+always preferred these days.)
+
 This directory is organized as would be found in an Android project.
 Separating `src` and `build` is a long standing Java development
 best practice that is best to adopt from the very beginning.
