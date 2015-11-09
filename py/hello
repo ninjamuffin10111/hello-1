@@ -35,9 +35,9 @@ if __name__ == '__main__':
         if sys.argv[1].startswith("-"):
             option = sys.argv[1]
         else:
-            who = sys.argv[1];
+            who = sys.argv[1]
 
-    message = "Hello " + who + "!";
+    message = "Hello " + who + "!"
 
     # could do this more directly with reflection or an arg
     # parser, but keeping is simple for now
@@ -46,8 +46,8 @@ if __name__ == '__main__':
         if option == "-m":
             multi(message)
         elif option == "-c":
-            color(message);
+            color(message)
         else:
-            plain(message);
+            plain(message)
     except KeyboardInterrupt:
         exit()
