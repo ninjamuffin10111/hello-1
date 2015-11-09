@@ -9,7 +9,7 @@ var c = require("skilstak-colors");
 var out = process.stdout;
 
 var plain = function (message) {
-  out.write(c.clear + message);  
+  out.write(c.clear + message + "\n");  
 }
 
 var color = function (message) {
@@ -19,11 +19,10 @@ var color = function (message) {
 }
 
 var multi = function (message) {
-  while (true) {
+  setInterval(function () { 
     out.write(c.clear + c.multi(message + " "));
     out.write("\n");
-    // TODO implement setInterval sleep
-  }
+  }, 500);
 }
 
 var who = "world";
