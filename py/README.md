@@ -112,7 +112,7 @@ work because it thinks the shebang line is just a comment. (But
 really why are you using IDLE, no one but students use IDLE, save
 yourself the hassle and start out learning it right, like the pros.)
 
-## if __name__ == '__main__':
+## `if __name__ == '__main__':`
 
 There's one more line that every Python program should have. It
 doesn't make sense at first but is very important since be allows
