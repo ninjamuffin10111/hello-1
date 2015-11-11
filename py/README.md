@@ -115,7 +115,7 @@ yourself the hassle and start out learning it right, like the pros.)
 ## `if __name__ == '__main__':`
 
 There's one more line that every Python program should have. It
-doesn't make sense at first but is very important since be allows
+doesn't make sense at first but is very important since it allows
 your program to be imported as a module as well as used as a command.
 If that doesn't make sense don't worry, just do it for now. You'll
 be glad later you did:
