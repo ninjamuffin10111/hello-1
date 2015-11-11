@@ -191,11 +191,15 @@ this about the code.
 3. The function is an indented *code block*
 4. `print_plain()` calls the function 
 
-Python is very picky about spaces. You should be using a properly
-configured `vim` editor that recognizes your Python code and
-automatically indents four spaces for every tab character. If you
-are not, for example you are using a Raspberry Pi, do yourself a
-favor and get it working before you continue.
+Python is very picky about spaces. Some people *really* hate this
+about Python, but it has since become very accepted, even preferred
+since it ensures code is readable even when bad programmers write
+it. You should be using a properly configured `vim` editor that
+recognizes your Python code and automatically indents four spaces
+for every tab character (not to mention syntax hilights for you).
+If you are not, for example you are using a Raspberry Pi, do yourself
+a favor and [get it working](http://github.com/skilstak/home-config)
+before you continue.
 
 Note: Python chokes on code that mixes tabs and spaces and will
 simply not run.
