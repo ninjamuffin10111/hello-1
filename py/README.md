@@ -47,7 +47,7 @@ yourself the hassle from the beginning.) But I digress:
 * `<esc>ZZ` or `<esc>:q` - save and exit
 * `<esc>ZQ` or `<esc>:q!` - just quit
 
-## #! 
+## `#!`
 
 Believe it or not, this is all you need for a minimal program:
 
@@ -91,7 +91,7 @@ Boom. Runnable:
 Hello world!
 ```
 
-## /usr/bin/env
+## `/usr/bin/env`
 
 There is one last trick to make this program work on *any* computer
 that has `python3`. For example, on most Ubuntu Linux systems
