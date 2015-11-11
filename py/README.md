@@ -108,9 +108,9 @@ print("Hello world!")
 
 There. We have a working program with all the right stuff. Wanna
 run this on Windows? No problem. Using the Python IDLE will still
-work because it thinks the shebang line is just a comment. But why
-are you using IDLE, no one but students does, save yourself the
-hassle and start out learning it right, like the pros.
+work because it thinks the shebang line is just a comment. (But
+really why are you using IDLE, no one but students use IDLE, save
+yourself the hassle and start out learning it right, like the pros.)
 
 ## if __name__ == '__main__':
 
