@@ -10,9 +10,10 @@ types, strings, numbers, booleans, lists/arrays, dictionaries/maps,
 operators, loops, logic, conditionals, blocks, functions, exceptions,
 math, command line arguments, code organization, and more).
 
-## Planning
+## But First ...
 
-This is the first Fundamentals project we do at SkilStak beginning
-with [Python](py), then [JavaScript](js), and then [HTML](html).
-Other Core courses do it as well in [Go](go), [Java](java), [C](c),
-[Shell](shell). 
+Make sure you have the [Code and Prep™](http://github.com/skilstak/prep)
+skills mastered before attempting this one.  This is the first
+Fundamentals project we do at SkilStak beginning with [Python](py),
+then [JavaScript](js), and then [HTML](html).  Other Core courses
+do it as well in [Go](go), [Java](java), [C](c), [Shell](shell).

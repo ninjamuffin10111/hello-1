@@ -13,10 +13,6 @@ dedicated to coding:
 
 ![](img/bloomberg.jpg)
 
-## But First ...
-
-Make sure you have the [Code and Prep™](http://github.com/skilstak/prep)
-skills mastered before attempting this one.
 
 ## The Right Python
 
