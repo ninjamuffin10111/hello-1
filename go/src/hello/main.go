@@ -8,17 +8,17 @@ import (
 	"time"
 )
 
-func plain(message string) {
+func PrintPlain(message string) {
 	fmt.Println(c.CL + message + c.X)
 }
 
-func color(message string) {
+func PrintColor(message string) {
 	for {
 		fmt.Print(c.Rc() + message + " " + c.X)
 	}
 }
 
-func multi(message string) {
+func PrintMulti(message string) {
 	for {
 		fmt.Println(c.Clear + c.Multi(message) + " " + c.X)
 		time.Sleep(500 * time.Millisecond)
@@ -44,15 +44,12 @@ func main() {
 
 	message = "Hello " + who + "!"
 
-	// could do this more directly with switch or an arg
-	// parser, but keeping is simple for now
-
 	if option == "-m" {
-		multi(message)
+		PrintMulti(message)
 	} else if option == "-c" {
-		color(message)
+		PrintColor(message)
 	} else {
-		plain(message)
+		PrintPlain(message)
 	}
 
 }
