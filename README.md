@@ -16,4 +16,5 @@ Make sure you have the [Code and Prep™](http://github.com/skilstak/prep)
 skills mastered before attempting this one.  This is the first
 Fundamentals project we do at SkilStak beginning with [Python](py),
 then [JavaScript](js), and then [HTML](html).  Other Core courses
-do it as well in [Go](go), [Java](java), [C](c), [Shell](shell).
+do it as well in [Go](go), [Java](java), [C](c), [Shell](shell), even
+[LolCode](lol).
