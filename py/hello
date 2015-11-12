@@ -47,6 +47,17 @@ def print_color(message):
     while True:
         print(c.rc() + message + c.reset, end=" ")
 
+def print_merica(message):
+    """Fills the screen with politically correctly colored <message>.
+    
+    Args:
+        message (str): message to print 
+
+    """
+    print(c.clear)
+    while True:
+        print(c.merica(message), end=" ")
+
 def parse_args():
     """Parse and return properties from the command line.
 
@@ -91,7 +102,8 @@ if __name__ == '__main__':
     # the 'try/except' is to gracefully exit when <cntl>-c
     try:
         if option == "-m":
-            print_multi(message)
+            #print_multi(message)
+            print_merica(message)
         elif option == "-c":
             print_color(message)
         else:

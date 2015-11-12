@@ -23,6 +23,7 @@ base00  = '\033[1;33m'
 BASE00  = base00
 B00     = base00
 b00     = base00
+white   = base00
 
 base0   = '\033[1;34m'
 BASE0   = base0
@@ -111,6 +112,24 @@ def multi(text):
     buf = ''
     for char in text:
         buf += rc() + char + x
+    return buf
+
+def merica(text):
+    """Prints the most patiotic text possible.
+
+    Args:
+        text (str): The text to print
+
+    """
+
+    buf = ''
+    the_best_colors_in_the_whole_world = [red,white,blue]
+    i = 0
+    for char in text:
+        buf += the_best_colors_in_the_whole_world[i] + char
+        i += 1
+        if i == 3: i = 0
+    buf += reset
     return buf
 
 def clear_screen():
