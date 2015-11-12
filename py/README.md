@@ -154,19 +154,27 @@ like too much work initially. We'll see how they help make sense
 of everything as we go.
 
 A *function*, which gets its name from math, is like a small program
-within a program. Using one is called *calling* a function. Here's
-what one looks like on our little program:
+within a program. Using one is called *calling* a function. In other
+words, there are function definitions and function calls. Here's
+what they both look like on our little program:
 
-```python3
+```python
 #!/usr/bin/env python3
 
 """The Ever Glorious Hello World Program"""
+
+# this is a function definition
+# vvvvvvvvvvvvvvvv
 
 def print_plain():
     """Print 'Hello world!' in plain text."""
     print("Hello world!")
 
 if __name__ == '__main__':
+
+    # this is a function call
+    # vvvvvvvvvvv
+
     print_plain()
 
 ```
@@ -180,28 +188,60 @@ which we'll discuss later.
 You might also notice we use `_` in between the words. This is
 standard Python style sometimes called *snake case*. You can
 occasionally find Python code that uses JavaScript-like mixed case
-(ex: printPlain), but the standard is officially snake. Consistency
+(ex: `printPlain`), but the standard is officially snake. Consistency
 is always king.
 
 We also added another docstring to document the function. Notice
-this about the code.
+the following about the code:
 
 1. `def` keyword defines the function name
 2. `:` begins the indented block of function code
-3. The function is an indented *code block*
-4. `print_plain()` calls the function 
+3. The function itself in a *code block*
+4. `print_plain()` the function call
 
-Python is very picky about spaces. Some people *really* hate this
-about Python, but it has since become very accepted, even preferred
-since it ensures code is readable even when bad programmers write
-it. You should be using a properly configured `vim` editor that
-recognizes your Python code and automatically indents four spaces
-for every tab character (not to mention syntax hilights for you).
-If you are not, for example you are using a Raspberry Pi, do yourself
-a favor and [get it working](http://github.com/skilstak/home-config)
-before you continue.
+Python is very picky about spaces and tabs, also known as *whitespace*.
+Some people *really* hate this about Python, but it has since become
+very accepted, even preferred since it ensures code is readable
+even when bad programmers write it. You should be using a properly
+configured `vim` editor that recognizes your Python code and
+automatically indents four spaces for every tab character (not to
+mention syntax highlights for you).  If you are not, for example
+you are using a Raspberry Pi, do yourself a favor and [get it
+working](http://github.com/skilstak/home-config) before you continue.
 
 Note: Python chokes on code that mixes tabs and spaces and will
 simply not run.
 
-#TODO more ...
+## Arguments Don't Just Cause Divorce
+
+While teaching about arguments I once said, "Ok, now we are going
+to learn about arguments" to which one of my students responded,
+"But why, arguments are bad, arguments cause divorce." So besides
+causing divorce arguments are really good things, mostly 'cuz mathz.
+Here's our program with an *argument* added to the function and a
+*parameter* added to the function call.
+
+```python
+#!/usr/bin/env python3
+
+"""The Ever Glorious Hello World Program"""
+
+def print_plain():
+    """Print 'Hello world!' in plain text."""
+    print("Hello world!")
+
+if __name__ == '__main__':
+    print_plain()
+
+
+```
+
+## Parameters Get Into Arguments
+
+People (including those writing text books) often confuse arguments
+and parameters. Strictly speaking arguments receive parameters. A
+function is like a candy machine. Arguments are like coin slot on
+the candy machine. Parameters are like the coins that go into the
+candy machine. Arguments are in the *function signature* (the line
+with `def` on it). The parameters are the actual values passed into
+the arguments by the function call.
