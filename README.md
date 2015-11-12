@@ -5,9 +5,10 @@ world with some real professional flare. Depending on how much
 programming you have done this might take you longer than you might
 expect, but it will be worth it. This version of the age-old *Hello
 World* program covers much more than most and introduces the main
-concepts and syntax of procedural programming (variables, strings,
-numbers, lists/arrays, dictionaries/maps, operators, logic,
-conditionals, functions, math, command line arguments, and more).
+concepts and syntax of procedural programming (variables, data
+types, strings, numbers, booleans, lists/arrays, dictionaries/maps,
+operators, loops, logic, conditionals, blocks, functions, exceptions,
+math, command line arguments, code organization, and more).
 
 ## Planning
 

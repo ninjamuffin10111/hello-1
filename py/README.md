@@ -1,11 +1,28 @@
-# Not 'Yo Grandma's Hello World (Python)
+# Hello Python
 
-No offense to anyone's dear grandmother let's do the traditional
-hello world with some real professional flare. Depending on how
-much programming you have done this might take you longer than you
-might expect, but it will be worth it. This version of hello world
-introduces most all of the fundamental procedural coding concepts
-you will use in most all of your programs. Let's get to it.
+![](https://www.python.org/static/community_logos/python-logo-generic.svg)
+
+Meet Python, the best first programming language anyone should
+learn.  It is approachable, easy, and &mdash; most of all &mdash;
+real. Python is a core language used by the worldwide scientific
+community &mdash; including MIT where it is the first language
+taught. Python is commonly put into other applications to give them
+script capability and can be found everywhere from elementary schools
+to Hollywood &mdash; even on the cover of the Bloomberg Businessweek
+dedicated to coding:
+
+![](img/bloomberg.jpg)
+
+## But First ...
+
+Make sure you have the [Code and Prep™](http://github.com/skilstak/prep)
+skills mastered before attempting this one.
+
+## The Right Python
+
+Students learn modern Python (3.4+ not 2.7) for many obvious reasons.
+On most systems this will mean using `python3` instead of `python`,
+which is no big deal.
 
 ## Creating A File, UNIX Style
 
