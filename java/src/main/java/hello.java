@@ -7,6 +7,7 @@
  */
 
 import skilstak.c;
+import java.util.HashMap;
 
 /**
  *  A class to print hello world-ish-ness to the terminal in different
@@ -47,10 +48,10 @@ public class hello {
         }
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static String[] parseArgs(String[] args) {
+
         String who = "world";
         String option = "";
-        String message = "";
 
         if (args.length > 1) {
             option = args[0];
@@ -63,11 +64,22 @@ public class hello {
             }
         }
 
-        message = "Hello " + who + "!";
+        String[] p = new String[2];
+        p[0] = who;
+        p[1] = option;
 
-        // could do this more directly with reflection or an arg
-        // parser, but keeping is simple for now
-       
+        return p;
+
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+
+        String[] p = parseArgs(args);
+        String who = p[0];
+        String option = p[1];
+
+        String message = "Hello " + who + "!";
+
         if (option.equals("-m")) {
             multi(message);
         } else if (option.equals("-c")) {
