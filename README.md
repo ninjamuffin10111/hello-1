@@ -18,3 +18,6 @@ Fundamentals project we do at SkilStak beginning with [Python](py),
 then [JavaScript](js), and then [HTML](html).  Other Core courses
 do it as well in [Go](go), [Java](java), [C](c), [Shell](shell), even
 [LolCode](lol).
+
+***Note: Make sure you start with [Python](py) since it covers things like
+creating your first script file, permissions and such.***

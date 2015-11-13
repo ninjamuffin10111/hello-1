@@ -102,8 +102,8 @@ if __name__ == '__main__':
     # the 'try/except' is to gracefully exit when <cntl>-c
     try:
         if option == "-m":
-            #print_multi(message)
-            print_merica(message)
+            print_multi(message)
+            #print_merica(message)
         elif option == "-c":
             print_color(message)
         else:
