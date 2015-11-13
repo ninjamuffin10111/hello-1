@@ -28,8 +28,8 @@ then [JavaScript](js), and then [HTML](html), (which everyone knows
 isn't a programming language, but still important to learn early).
 Other Core courses do it as well in [Go](go), [Java](java), [C](c),
 [Shell](shell), even [LolCode](lol). [And if it can't be coded from
-the command line it's an irrelevant language that you shouldn't waste
-time with anyway.]
+the command line it's an irrelevant language anyway that you shouldn't 
+waste any time on.]
 
 ***Note: Make sure you start with [Python](py) since it covers things like
 creating your first script file, permissions and such.***
