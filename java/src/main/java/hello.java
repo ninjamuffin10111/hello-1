@@ -7,7 +7,6 @@
  */
 
 import skilstak.c;
-import java.util.HashMap;
 
 /**
  *  A class to print hello world-ish-ness to the terminal in different
@@ -20,7 +19,7 @@ public class hello {
      *
      * @param message the message to print
      */
-    public static void color(String message) {
+    public static void printColor(String message) {
         System.out.println(c.clear);
         while (true) {
             System.out.print(c.rc() + message + " ");
@@ -32,7 +31,7 @@ public class hello {
      *
      * @param message the message to print
      */
-    public static void plain(String message) {
+    public static void printPlain(String message) {
         System.out.println(c.clear + message);
     }
 
@@ -41,7 +40,7 @@ public class hello {
      *
      * @param message the message to print
      */
-    public static void multi(String message) throws InterruptedException {
+    public static void printMulti(String message) throws InterruptedException {
         while (true) {
             System.out.print(c.clear + c.multi(message));
             Thread.sleep(500);
@@ -87,11 +86,11 @@ public class hello {
         String message = "Hello " + who + "!";
 
         if (option.equals("-m")) {
-            multi(message);
+            printMulti(message);
         } else if (option.equals("-c")) {
-            color(message);
+            printColor(message);
         } else {
-            plain(message);
+            printPlain(message);
         }
     }
 }
