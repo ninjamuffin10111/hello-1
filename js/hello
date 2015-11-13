@@ -2,53 +2,51 @@
 
 'use strict';
 
-// old school, use process.stdout instead
-//console.log("Hello world");
-
 var c = require("skilstak-colors");
-var out = process.stdout;
+var out = process.stdout; // instead of console.log()
 
-var plain = function (message) {
+var printPlain = function (message) {
   out.write(c.clear + message + "\n");  
 }
 
-var color = function (message) {
+var printColor = function (message) {
   while (true) {
     out.write(c.rc() + message + ' ' + c.x);
   }
 }
 
-var multi = function (message) {
+var printMulti = function (message) {
   setInterval(function () { 
     out.write(c.clear + c.multi(message + " "));
     out.write("\n");
   }, 500);
 }
 
-var who = "world";
-var option = "";
-var message = "";
-
-if (process.argv.length > 3) {
-  option = process.argv[2];
-  who = process.argv[3];
-} else if (process.argv.length == 3) {
-  if (process.argv[2][0] == "-") {
+var parseArgs = function (message) {
+  var who = "world";
+  var option = "";
+  if (process.argv.length > 3) {
     option = process.argv[2];
-  } else {
+    who = process.argv[3];
+  } else if (process.argv.length == 3) {
+    if (process.argv[2][0] == "-") {
+      option = process.argv[2];
+    } else {
     who = process.argv[2];
+    }
   }
+  return {"who":who, "option": option};
 }
 
-message = "Hello " + who + "!";
+// main
 
-// could do this more directly with reflection or an arg
-// parser, but keeping is simple for now
+var p = parseArgs();
+var message = "Hello " + p.who + "!";
 
-if (option === "-m") {
-  multi(message)
-} else if (option === "-c") {
-  color(message);
+if (p.option === "-m") {
+  printMulti(message)
+} else if (p.option === "-c") {
+  printColor(message);
 } else {
-  plain(message);
+  printPlain(message);
 }
