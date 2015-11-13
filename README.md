@@ -3,12 +3,17 @@
 No offense to anyone's dear grandmother let's do the traditional hello
 world with some real professional flare. Depending on how much
 programming you have done this might take you longer than you might
-expect, but it will be worth it. This version of the age-old *Hello
-World* program covers much more than most and introduces the main
-concepts and syntax of procedural programming (variables, data
-types, strings, numbers, booleans, lists/arrays, dictionaries/maps,
-operators, loops, logic, conditionals, blocks, functions, exceptions,
-math, command line arguments, code organization, and more).
+expect, but it will be worth it. 
+
+*Hello World* is a traditional program created anytime someone wants
+to demonstrate or test everything needed to get a basic program to
+run or to show the basics of what that program looks like. But we
+say, why not show all the fundamental procedural programming concepts
+of the language?  Most languages have variables, data types, strings,
+numbers, booleans, lists/arrays, dictionaries/maps, operators,
+loops, logic, conditionals, blocks, functions, exceptions, math,
+command line arguments, and modules/packages. This version of *hello
+world* let's you compare them all.
 
 ## But First ...
 
