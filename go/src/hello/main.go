@@ -1,3 +1,13 @@
+/*
+Not yo grandma's hello world.
+
+This program can be run from the command line (see parseArgs())
+or imported as a module  that other programs can use
+its functions.
+
+This documentation can be displayed with or converted to web page
+with any number of tools.
+*/
 package main
 
 import (
@@ -25,10 +35,9 @@ func PrintMulti(message string) {
 	}
 }
 
-func main() {
+func parseArgs() (string, string) {
 	var who = "world"
 	var option = ""
-	var message = ""
 
 	if len(os.Args) > 2 {
 		option = os.Args[1]
@@ -41,9 +50,13 @@ func main() {
 			who = os.Args[1]
 		}
 	}
+	return who, option
 
-	message = "Hello " + who + "!"
+}
 
+func main() {
+	who, option := parseArgs()
+	message := "Hello " + who + "!"
 	if option == "-m" {
 		PrintMulti(message)
 	} else if option == "-c" {
@@ -51,5 +64,4 @@ func main() {
 	} else {
 		PrintPlain(message)
 	}
-
 }
