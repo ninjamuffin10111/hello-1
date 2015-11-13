@@ -48,10 +48,16 @@ public class hello {
         }
     }
 
+    /**
+     * Parse the arguments looking for the options and who to say
+     * hello to.
+     *
+     * @param args the arguments passed from standard main method
+     */
     public static String[] parseArgs(String[] args) {
 
-        String who = "world";
         String option = "";
+        String who = "world";
 
         if (args.length > 1) {
             option = args[0];
@@ -65,8 +71,8 @@ public class hello {
         }
 
         String[] p = new String[2];
-        p[0] = who;
-        p[1] = option;
+        p[0] = option;
+        p[1] = who;
 
         return p;
 
@@ -75,8 +81,8 @@ public class hello {
     public static void main(String[] args) throws InterruptedException {
 
         String[] p = parseArgs(args);
-        String who = p[0];
-        String option = p[1];
+        String option = p[0];
+        String who = p[1];
 
         String message = "Hello " + who + "!";
 
