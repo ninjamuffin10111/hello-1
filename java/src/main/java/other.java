@@ -1,9 +1,7 @@
 
-import hello;
-
 public class other {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         hello.printMulti("Hello world!");
     }
 
