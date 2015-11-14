@@ -19,7 +19,11 @@ import (
 )
 
 func PrintPlain(message string) {
-	fmt.Println(c.CL + message + c.X)
+	fmt.Println(message)
+}
+
+func PrintFoeva(message string) {
+	fmt.Println(message)
 }
 
 func PrintColor(message string) {
