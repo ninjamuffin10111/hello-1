@@ -14,10 +14,12 @@ def print_usage():
     print("""usage:
     hello
     hello You
+    hello -f
+    hello -f You
     hello -c
-    hello -m
     hello -c You
-    hello -m You""")
+    hello -m
+    hello -m You
     hello -h""")
 
 if __name__ == '__main__':
@@ -29,7 +31,9 @@ if __name__ == '__main__':
 
     # the 'try/except' is to gracefully exit when <cntl>-c
     try:
-        if option == "-m":
+        if option == "-f":
+            hello.print_foreva(message)
+        elif option == "-m":
             hello.print_multi(message)
             #print_merica(message)
         elif option == "-c":

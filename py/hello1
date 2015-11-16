@@ -7,9 +7,6 @@ greeting = "Privyet"
 def print_plain(who):
     print(greeting + " " + who + "!")
 
-def print_foreva(who):
-    while True:
-        print(greeting + " " + who + "!")
 
 if __name__ == '__main__':
     print_plain("world")
