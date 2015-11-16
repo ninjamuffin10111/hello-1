@@ -18,6 +18,7 @@ def print_usage():
     hello -m
     hello -c You
     hello -m You""")
+    hello -h""")
 
 if __name__ == '__main__':
     import hello
