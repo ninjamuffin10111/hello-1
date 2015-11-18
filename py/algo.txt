@@ -1,4 +1,4 @@
-we have a name/name, by default name is 'world'
+we have a name, by default name is 'world'
 we have an option, by default option is empty
 
 if exactly two arguments:
@@ -8,16 +8,10 @@ if exactly two arguments:
     it is a name
 
 elif there are more than two arguments:
-  if the second argument starts with '-':
-    it is an argument
+    second argument is an option
     the third argument is a name
-  else
-    the second argument is a name
-    (we don't care about more than 2 arguments)
-else we have no arguments
-  we don't care
 
-create our message
+create our message to the name
 
 if option is -m
   print multiple colors message

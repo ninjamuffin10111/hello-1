@@ -25,9 +25,8 @@ def print_usage():
 if __name__ == '__main__':
     import hello
 
-    p = hello.parse_args()
-    option = p['option']
-    message = 'Hello ' + p['name'] + '!'
+    name, option = hello.parse_args()
+    message = 'Hello ' + name + '!'
 
     # the 'try/except' is to gracefully exit when <cntl>-c
     try:

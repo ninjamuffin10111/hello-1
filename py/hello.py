@@ -77,19 +77,17 @@ def parse_args():
     # import here instead of top since only this function uses
     from sys import argv
 
-    # create a dictionary to hold our values
-    p = {
-        "name": "world",
-        "option": ""
-    }
+    name = "world"
+    option = ""
 
-    if len(argv) > 2:
-        p['option'] = argv[1]
-        p['name'] = argv[2]
-    elif len(argv) == 2:
+    if len(argv) == 2:
         if argv[1].startswith("-"):
-            p['option'] = argv[1]
+            option = argv[1]
         else:
-            p['name'] = argv[1]
-    return p 
+            name = argv[1]
+    elif len(argv) > 2:
+        option = argv[1]
+        name = argv[2]
+
+    return name, option
 
