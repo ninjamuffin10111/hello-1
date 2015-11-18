@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
 
-"""The ever glorious hello world program"""
+import skilstak.colors as c
 
-greeting = "Privyet"
+"""This is my hello world program."""
 
-def print_plain(who):
-    print(greeting + " " + who + "!")
-
+def print_plain(message):
+    print(message)
 
 if __name__ == '__main__':
-    print_plain("world")
+    from sys import argv
+
+    who = "world"
+
+    if len(argv) == 2:
+        who = argv[1] 
+    print_plain("Hello " + who + "!")
+

@@ -1,0 +1,29 @@
+we have a name/who, by default who is 'world'
+we have an option, by default option is empty
+
+# the first argument is always the program name
+if exactly two arguments:
+  if the second argument starts with '-'
+    it is an option
+  else
+    it is a name
+
+elif there are more than two arguments:
+  if the second argument starts with '-':
+    it is an argument
+    the third argument is a name
+  else
+    the second argument is a name
+    (we don't care about more than 2 arguments)
+else we have no arguments
+  we don't care
+
+create our message
+
+if option is -m
+  print multiple colors message
+elif option is -c
+  print colored message
+else
+  print plain ol message
+

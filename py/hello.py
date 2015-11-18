@@ -70,22 +70,12 @@ def print_merica(message):
 def parse_args():
     """Parse and return properties from the command line.
 
-    Program accepts any of the following:
-
-        hello
-        hello You
-        hello -c
-        hello -m
-        hello -c You
-        hello -m You
-   
     Returns:
         dict: A dictionary of properties (who, option)
 
     """
-
     # import here instead of top since only this function uses
-    import sys
+    from sys import argv
 
     # create a dictionary to hold our values
     p = {
@@ -93,13 +83,13 @@ def parse_args():
         "option": ""
     }
 
-    if len(sys.argv) > 2:
-        p['option'] = sys.argv[1]
-        p['who'] = sys.argv[2]
-    elif len(sys.argv) == 2:
-        if sys.argv[1].startswith("-"):
-            p['option'] = sys.argv[1]
+    if len(argv) > 2:
+        p['option'] = argv[1]
+        p['who'] = argv[2]
+    elif len(argv) == 2:
+        if argv[1].startswith("-"):
+            p['option'] = argv[1]
         else:
-            p['who'] = sys.argv[1]
+            p['who'] = argv[1]
     return p 
 
