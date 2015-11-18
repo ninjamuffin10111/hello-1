@@ -1,7 +1,6 @@
-we have a name/who, by default who is 'world'
+we have a name/name, by default name is 'world'
 we have an option, by default option is empty
 
-# the first argument is always the program name
 if exactly two arguments:
   if the second argument starts with '-'
     it is an option

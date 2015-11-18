@@ -10,9 +10,9 @@ def print_plain(message):
 if __name__ == '__main__':
     from sys import argv
 
-    who = "world"
+    name = "world"
 
     if len(argv) == 2:
-        who = argv[1] 
-    print_plain("Hello " + who + "!")
+        name = argv[1] 
+    print_plain("Hello " + name + "!")
 

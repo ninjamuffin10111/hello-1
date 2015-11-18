@@ -71,7 +71,7 @@ def parse_args():
     """Parse and return properties from the command line.
 
     Returns:
-        dict: A dictionary of properties (who, option)
+        dict: A dictionary of properties (name, option)
 
     """
     # import here instead of top since only this function uses
@@ -79,17 +79,17 @@ def parse_args():
 
     # create a dictionary to hold our values
     p = {
-        "who": "world",
+        "name": "world",
         "option": ""
     }
 
     if len(argv) > 2:
         p['option'] = argv[1]
-        p['who'] = argv[2]
+        p['name'] = argv[2]
     elif len(argv) == 2:
         if argv[1].startswith("-"):
             p['option'] = argv[1]
         else:
-            p['who'] = argv[1]
+            p['name'] = argv[1]
     return p 
 

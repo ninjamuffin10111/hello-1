@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
     p = hello.parse_args()
     option = p['option']
-    message = 'Hello ' + p['who'] + '!'
+    message = 'Hello ' + p['name'] + '!'
 
     # the 'try/except' is to gracefully exit when <cntl>-c
     try:
