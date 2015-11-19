@@ -92,7 +92,7 @@ to look on the first line for a shebang, (or to just assume it is
 a shell program, which it isn't in this case):
 
 ```python
-#!/usr/bin/python
+#!/usr/bin/python3
 
 print("Hello world!")
 ```
@@ -114,7 +114,7 @@ has been installed with `brew install python3` it might be in
 line ensures `python3` will be found where ever it may be:
 
 ```python
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 print("Hello world!")
 ```
