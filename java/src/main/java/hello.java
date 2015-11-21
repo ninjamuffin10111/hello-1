@@ -48,7 +48,7 @@ public class hello {
     }
 
     /**
-     * Parse the arguments looking for the options and who to say
+     * Parse the arguments looking for the options and name to say
      * hello to.
      *
      * @param args the arguments passed from standard main method
@@ -56,22 +56,22 @@ public class hello {
     public static String[] parseArgs(String[] args) {
 
         String option = "";
-        String who = "world";
+        String name = "world";
 
-        if (args.length > 1) {
-            option = args[0];
-            who = args[1];
-        } else if (args.length == 1) {
+        if (args.length == 1) {
             if (args[0].startsWith("-")) {
                 option = args[0];
             } else {
-                who = args[0];
+                name = args[0];
             }
+        } else if (args.length > 1) {
+            option = args[0];
+            name = args[1];
         }
 
         String[] p = new String[2];
         p[0] = option;
-        p[1] = who;
+        p[1] = name;
 
         return p;
 
@@ -81,9 +81,9 @@ public class hello {
 
         String[] p = parseArgs(args);
         String option = p[0];
-        String who = p[1];
+        String name = p[1];
 
-        String message = "Hello " + who + "!";
+        String message = "Hello " + name + "!";
 
         if (option.equals("-m")) {
             printMulti(message);
