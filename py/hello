@@ -10,18 +10,6 @@ or converted to web page with any number of tools.
 
 """
 
-def print_usage():
-    print("""usage:
-    hello
-    hello You
-    hello -s
-    hello -s You
-    hello -c
-    hello -c You
-    hello -m
-    hello -m You
-    hello -h""")
-
 if __name__ == '__main__':
     import hello as h
 

@@ -56,6 +56,7 @@ def print_color(message):
     while True:
         print(c.rc() + message + c.reset, end=" ")
 
+# This one is just for fun. Invent your own!
 def print_merica(message):
     """Fills the screen with politically correctly colored <message>.
     
