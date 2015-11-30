@@ -24,15 +24,15 @@ def print_plain(message):
     """
     print(message)
 
-def print_foreva(message):
-    """ Prints <message> to the screen forever (without line return)
+def print_stripes(message):
+    """ Prints <message> to the screen forever as stripes
 
     Args:
-        message (str): message to print forever
+        message (str): message to print
 
     """
     while True:
-        print(message,end=" ")
+        print(message,end="                         ")
 
 def print_multi(message):
     """Prints <message> in multiple colors like a Christmas tree (or Vegas sign).
