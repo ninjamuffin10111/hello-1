@@ -23,23 +23,23 @@ def print_usage():
     hello -h""")
 
 if __name__ == '__main__':
-    import hello
+    import hello as h
 
-    name, option = hello.parse_args()
+    name, option = h.parse_args()
     message = 'Hello ' + name + '!'
 
     # the 'try/except' is to gracefully exit when <cntl>-c
     try:
         if option == "-f":
-            hello.print_foreva(message)
+            h.print_foreva(message)
         elif option == "-m":
-            hello.print_multi(message)
+            h.print_multi(message)
             #print_merica(message)
         elif option == "-c":
-            hello.print_color(message)
+            h.print_color(message)
         elif option == "-h":
             print_usage()
         else:
-            hello.print_plain(message)
+            h.print_plain(message)
     except KeyboardInterrupt:
         exit()
