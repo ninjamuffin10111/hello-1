@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+
+import hello as h
+h.print_multi("Hello again!")

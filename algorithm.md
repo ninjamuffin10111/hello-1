@@ -7,15 +7,15 @@ Psuedocode:
   we have a name, by default name is 'world'
   we have an option, by default option is an empty string
 
-  if exactly two arguments (the program name and another) then
+  if exactly two arguments (hello -m OR hello Rob) then
     if the second argument starts with '-'
-      set the option to the second argument 
+      set the option to the second argument  (argv[1])
     else
-      set the name to the second argument
+      set the name to the second argument (argv[1])
 
-  else if there are more than two arguments then
-    set the option to the second argument
-    set the name to the third argument
+  else if there are more than two arguments (hello -m Rob) then
+    set the option to the second argument (argv[1])
+    set the name to the third argument (argv[2])
 
   create our message to the name
 
