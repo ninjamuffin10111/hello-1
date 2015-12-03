@@ -10,62 +10,16 @@ with any number of tools.
 */
 package main
 
-import (
-	"fmt"
-	c "github.com/skilstak/go/colors"
-	"os"
-	"strings"
-	"time"
-)
-
-func PrintPlain(message string) {
-	fmt.Println(message)
-}
-
-func PrintFoeva(message string) {
-	fmt.Println(message)
-}
-
-func PrintColor(message string) {
-	for {
-		fmt.Print(c.Rc() + message + " " + c.X)
-	}
-}
-
-func PrintMulti(message string) {
-	for {
-		fmt.Println(c.Clear + c.Multi(message) + " " + c.X)
-		time.Sleep(500 * time.Millisecond)
-	}
-}
-
-func parseArgs() (string, string) {
-	var who = "world"
-	var option = ""
-
-	if len(os.Args) > 2 {
-		option = os.Args[1]
-		who = os.Args[2]
-
-	} else if len(os.Args) == 2 {
-		if strings.HasPrefix(os.Args[1], "-") {
-			option = os.Args[1]
-		} else {
-			who = os.Args[1]
-		}
-	}
-	return who, option
-
-}
+import h "hello/lib"
 
 func main() {
-	who, option := parseArgs()
+	who, option := h.ParseArgs()
 	message := "Hello " + who + "!"
 	if option == "-m" {
-		PrintMulti(message)
+		h.PrintMulti(message)
 	} else if option == "-c" {
-		PrintColor(message)
+		h.PrintColor(message)
 	} else {
-		PrintPlain(message)
+		h.PrintPlain(message)
 	}
 }

@@ -229,32 +229,35 @@ simply not run.
 
 While teaching about arguments I once said, "Ok, now we are going
 to learn about arguments" to which one of my students responded,
-"But why, arguments are bad, arguments cause divorce." So besides
-causing divorce arguments are really good things, mostly 'cuz mathz.
-Here's our program with an *argument* added to the function and a
-*parameter* added to the function call.
+"But why, arguments are bad, arguments cause divorce." But programming
+arguments are good things, I promise 'cuz mathz.  Here's our program
+with a `message` *argument* added to the function and a `"Hello
+world"` string *parameter* added to the function call.
 
 ```python
 #!/usr/bin/env python3
 
 """The Ever Glorious Hello World Program"""
 
-def print_plain():
-    """Print 'Hello world!' in plain text."""
-    print("Hello world!")
+def print_plain(message):
+    """Print <message> in plain text."""
+    print(message)
 
 if __name__ == '__main__':
-    print_plain()
-
+    print_plain("Hello world")
 
 ```
 
 ## Parameters Get Into Arguments
 
 People (including those writing text books) often confuse arguments
-and parameters. Strictly speaking arguments receive parameters. A
-function is like a candy machine. Arguments are like coin slot on
-the candy machine. Parameters are like the coins that go into the
-candy machine. Arguments are in the *function signature* (the line
-with `def` on it). The parameters are the actual values passed into
-the arguments by the function call.
+and parameters. **Strictly speaking arguments receive parameters.**
+A function is like a candy machine. Arguments are like coin slot
+on the candy machine. Parameters are like the coins that go into
+the candy machine. Arguments are in the *function signature* (the
+line with `def` on it). The parameters are the actual values passed
+into the arguments by the function call.
+
+## Getting Colorful
+
+
