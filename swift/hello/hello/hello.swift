@@ -8,16 +8,19 @@
 
 import Foundation
 
+// Prints the message without any effects
 public func printPlain(message: String) {
     print(message)
 }
 
+// `printPlain`s forever
 public func printForever(message: String) {
     while true {
-        print(message, terminator: " ")
+        printPlain(message, terminator: " ")
     }
 }
 
+// Fills the screen with random colored `message`s
 public func printColor(message: String) {
     print(cl)
     while true {
@@ -25,6 +28,7 @@ public func printColor(message: String) {
     }
 }
 
+// Prints every letter in `message` in a different, random color
 public func printMulti(message: String) {
     while true {
         print(cl + multi(message))
@@ -32,6 +36,7 @@ public func printMulti(message: String) {
     }
 }
 
+// Parses the command-line args
 public func parseArgs() -> [String : String] {
     let argv = Process.arguments
     var p: [String : String] = ["name": "World", "option": ""]

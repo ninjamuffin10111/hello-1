@@ -8,6 +8,11 @@
 
 import Foundation
 
+/* 
+ * This is a simple way to add Array.randItem().
+ * Similar to python's `random.choice(Array)`
+ */
+
 extension Array {
     func randItem() -> Element {
         let index = Int(arc4random_uniform(UInt32(self.count)))
@@ -112,10 +117,12 @@ let colors  = [red,orange,yellow,green,cyan,blue,magenta,violet]
 public func randomColor() -> String {
     return colors.randItem()
 }
+// randomColor alias
 public func rc() -> String {
     return randomColor()
 }
 
+// Prints every letter in a different, random colors
 public func multi(text: String) -> String {
     var buf = ""
     for char in text.characters {
@@ -124,6 +131,7 @@ public func multi(text: String) -> String {
     return buf
 }
 
+// Prints every letter in a different, rainbow colors
 public func rainbow(text: String) -> String {
     var buf = ""
     var i = 0
@@ -137,6 +145,7 @@ public func rainbow(text: String) -> String {
     return buf
 }
 
+// Prints every letter in different, american colors
 public func merica(text: String) -> String {
     var buf = ""
     let colorz = [red,white,blue]
