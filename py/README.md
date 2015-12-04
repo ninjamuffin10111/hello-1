@@ -13,12 +13,37 @@ dedicated to coding:
 
 ![](img/bloomberg.jpg)
 
+## Resources and Requirements
 
-## The Right Python
+[![][cc0]][cc0link]
 
-Students learn modern Python (3.4+ not 2.7) for many obvious reasons.
-On most systems this will mean using `python3` instead of `python`,
-which is no big deal.
+This section is for those setting up stuff for students to use
+for this project.
+
+Students learn modern Python (3.4+ not 2.7) for many obvious reasons
+and will need access to a command-line and `python3` installed.
+For most this will be through an ssh connection to a Linux server
+for example, `ssh you@skilstak.sh` or using a Raspberry Pi. Students
+can also simply use any Mac, which has the command-line needed and
+only needs `python3` installed. Others, particularly Windows users,
+should install a Linux virtual machine. We don't use Python IDLE
+preferring to use the command line as most professionals and colleges
+do.
+
+GitHub accounts for each student are strongly recommended with
+a `save` shell script like the following to make commits easier:
+
+```shell
+#!/bin/sh
+
+comment=save
+[ ! -z "$*" ] && comment="$*"
+
+git pull
+git add -A .
+git commit -a -m "$comment"
+git push origin master
+```
 
 ## Creating A File, UNIX Style
 
@@ -261,3 +286,6 @@ into the arguments by the function call.
 ## Getting Colorful
 
 
+[cc0]: http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg
+"CC0 Public Domain"
+[cc0link]: https://creativecommons.org/publicdomain/zero/1.0/
