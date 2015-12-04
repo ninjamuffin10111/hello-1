@@ -153,10 +153,8 @@ yourself the hassle and start out learning it right, like the pros.)
 ## `if __name__ == '__main__':`
 
 There's one more line that every Python program should have. It
-doesn't make sense at first but is very important since it allows
-your program to be imported as a module as well as used as a command.
-If that doesn't make sense don't worry, just do it for now. You'll
-be glad later you did:
+doesn't make sense at first but is very important for reasons we will
+discuss later:
 
 ```python
 #!/usr/bin/env python3
@@ -167,9 +165,21 @@ if __name__ == '__main__':
     print("Hello world!")
 ```
 
-Notice we added some text as well. That's called a *docstring* and is
-essentially ignored by the program but allows us to document our
-program as we go so programs like `pydoc3` can do this:
+Notice we added some text as well. Let's talk about that for a moment.
+
+## Strings
+
+Anytime you see quotes around text and words (or even numbers) you
+are working with what's called a **string**. Think of the string
+that holds beads on a bracelet or necklace. The beads are the letters
+and numbers in the string and the quotes on the ends hold the beads
+on the string.
+
+## Documenting Your Code
+
+The three quoted string is called a *docstring* and is essentially
+ignored by the program but allows us to document our program as we
+go so programs like `pydoc3` can do this:
 
 ```shell
 > pydoc3 ./hello
@@ -261,7 +271,7 @@ Arguments and parameters are like a vending machine and the money
 you put into it. An argument is the slot and the money is the
 parameter. Putting the money into the slot is like calling a function
 and passing a parameter value. For example, here's our program with
-a `message` *argument* and a `"Hello world"` string *parameter*:
+a `message` *argument* and a `"Hello world"` *parameter*:
 
 ```python
 #!/usr/bin/env python3
