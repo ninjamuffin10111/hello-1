@@ -47,27 +47,36 @@ git push origin master
 
 ## Creating A File, UNIX Style
 
-Pros use `vi` and so will we but first here's how we create a file
-and make is runnable:
+To create a file we'll use `touch` which simply creates an empty file
+(or updates the last modified time of an existing file):
 
 ```shell
-touch hello
-chmod +x hello
+> touch hello
+> ls
+hello
 ```
 
-Now when we look at the file we see the color changed. This is because
-the computer thinks the file is a runnable script now instead of just
-a text file.
+The computer thinks our `hello` file is a simple text file. To make
+it see the file as a script that can be executed (think runnable
+not murdered) we have to use the `chmod +x hello` command:
+
+```shell
+> chmod +x hello
+```
+
+Don't worry about the details of `chmod` permissions for now. Notice 
+when we look at the file we see the color changed. The computer
+will now allow us to run this file instead of just open and read
+it.
 
 Some might tell you to use the name `hello.py` but that's just
-stupid for a command. No pros do that. It is true, however, that
-the `.py` is required if you are making a module, which we aren't,
-but will be later. In short, if you are going to be typing it a lot
-save the suffix.
+stupid for a command. Pros don't do that so neither will we. It is
+true, however, that the `.py` is required if you are making a module,
+which we aren't, but will be later.
 
 ## VIM, The One True Editor
 
-Now let's edit it:
+Now let's put some code in the file it:
 
 ```shell
 vi hello
@@ -89,7 +98,7 @@ yourself the hassle from the beginning.) But I digress:
 * `<esc>ZZ` or `<esc>:q` - save and exit
 * `<esc>ZQ` or `<esc>:q!` - just quit
 
-## `#!`
+## The Simplest Code You Will Ever Write
 
 Believe it or not, this is all you need for a minimal program:
 
@@ -104,21 +113,28 @@ the file:
 > python3 hello
 ```
 
-But no one really wants to type all that in every time. So UNIX has
-this thing called a shebang (or sometimes crunchbang). It is a
-special line that if found tells the computer what program to use
-for the rest of the code in the file, but first you have to set the
-executable permission on the text file to signal that it is something
-you want to run and not just a regular text file:
+But no one really wants to type all that in every time. In fact, try
+running hello without the `python3` and see what happens:
 
 ```shell
-> chmod +x hello
+> hello
+./hello: line 2: syntax error near unexpected token `"Hello world!"'
+./hello: line 2: `print("Hello world!")'
 ```
 
-Don't worry about the details of permissions and file for now. That
-will come in time. Just know when the `x` is added it tells the shell
-to look on the first line for a shebang, (or to just assume it is
-a shell program, which it isn't in this case):
+Definitely not working. That ugly `syntax error`, (which means it
+doesn't understand your code), is coming from the computer trying to
+guess what language your `hello` program needs. Obviously it is
+guessing wrong. (It assumes Bash shell, which is they language of the
+command line itself.) 
+
+## SheBang `#!`
+
+UNIX has a thing called a shebang (or sometimes crunchbang).  It
+is a special line that if found on the very first line of your
+script tells the computer what program to use for the rest of the
+code in the file The 'she' (pronounced 'sheh') stands for 'hashtag'
+(\#) symbol. The 'bang' is an exclamation point (\!).
 
 ```python
 #!/usr/bin/python3
@@ -177,7 +193,10 @@ Anytime you see quotes around text and words (or even numbers) you
 are working with what's called a **string**. Think of the string
 that holds beads on a bracelet or necklace. The beads are the letters
 and numbers in the string and the quotes on the ends hold the beads
-on the string.
+on the string. A **string** is a type of data or **data type**. There
+are other data types, numbers for example, that we'll talk about
+later. Data types are used by the computer to treat data (information)
+differently.
 
 ## Documenting Your Code
 
@@ -207,7 +226,7 @@ of everything as we go.
 
 A *function*, which gets its name from math, is like a small program
 within a program. Using one is called *calling* a function. In other
-words, there are function definitions and function calls. Here's
+words, there are function *definitions* and function *calls*. Here's
 what they both look like on our little program:
 
 ```python
