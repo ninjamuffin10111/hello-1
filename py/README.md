@@ -55,6 +55,10 @@ touch hello
 chmod +x hello
 ```
 
+Now when we look at the file we see the color changed. This is because
+the computer thinks the file is a runnable script now instead of just
+a text file.
+
 Some might tell you to use the name `hello.py` but that's just
 stupid for a command. No pros do that. It is true, however, that
 the `.py` is required if you are making a module, which we aren't,
