@@ -6,8 +6,8 @@ different ways. For example:
 ```
 hello
 hello -m
-hello Rob
-hello -m Rob
+hello Harry
+hello -m Harry 
 ```
 
 ## Psuedocode:
@@ -17,15 +17,15 @@ we have a name, by default name is 'world'
 
 we have an option, by default the option is an empty string ("")
 
-if exactly two arguments (hello -m OR hello Rob) then
+if exactly two arguments (hello -m OR hello Harry) then
     if the second argument starts with '-'
-      set the option to the second argument  (argv[1])
+      set the option to the second argument
     else
-      set the name to the second argument (argv[1])
+      set the name to the second argument
 
-if there are more than two arguments (hello -m Rob) then
-    set the option to the second argument (argv[1])
-    set the name to the third argument (argv[2])
+if there are more than two arguments (hello -m Harry) then
+    set the option to the second argument
+    set the name to the third argument
 
   create our message to the name
 
@@ -37,5 +37,5 @@ if there are more than two arguments (hello -m Rob) then
     print the message forever
   else if option is '-h'
   else
-    print a plain ol message
+    print a plain 'ol message
 ```
