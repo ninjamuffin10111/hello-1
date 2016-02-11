@@ -10,11 +10,10 @@ hello Harry
 hello -m Harry 
 ```
 
-## Psuedocode:
+## Pseudocode:
 
 ```
 we have a name, by default name is 'world'
-
 we have an option, by default the option is an empty string ("")
 
 if exactly two arguments (hello -m OR hello Harry) then
@@ -27,14 +26,14 @@ if there are more than two arguments (hello -m Harry) then
     set the option to the second argument
     set the name to the third argument
 
-  create our message to the name
+create our message to the name
 
-  if the option is '-m'
-    print message in multiple colors
-  else if option is '-c'
-    print a randomly colored message
-  else if option is '-f'
-    print the message forever
-  else
-    print a plain 'ol message
+if the option is '-m'
+  print message in multiple colors
+else if option is '-c'
+  print a randomly colored message
+else if option is '-f'
+  print the message forever
+else
+  print a plain 'ol message
 ```

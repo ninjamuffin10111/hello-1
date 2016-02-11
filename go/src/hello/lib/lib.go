@@ -23,7 +23,9 @@ func PrintPlain(message string) {
 }
 
 func PrintFoeva(message string) {
-	fmt.Println(message)
+	for {
+		fmt.Println(message)
+	}
 }
 
 func PrintColor(message string) {
