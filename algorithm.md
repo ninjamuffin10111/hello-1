@@ -22,7 +22,7 @@ if exactly two arguments (hello -m OR hello Harry) then
     else
       set the name to the second argument
 
-if there are more than two arguments (hello -m Harry) then
+else if there are more than two arguments (hello -m Harry) then
     set the option to the second argument
     set the name to the third argument
 
