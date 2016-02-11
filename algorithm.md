@@ -13,6 +13,7 @@ hello -m Harry
 ## Pseudocode:
 
 ```
+we have an unchanging (constant) greeting for all ("Hello")
 we have a name, by default name is 'world'
 we have an option, by default the option is an empty string ("")
 
