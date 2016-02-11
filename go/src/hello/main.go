@@ -15,11 +15,13 @@ import h "hello/lib"
 func main() {
 	who, option := h.ParseArgs()
 	message := "Hello " + who + "!"
-	if option == "-m" {
+
+	switch option {
+	case "-m":
 		h.PrintMulti(message)
-	} else if option == "-c" {
+	case "-c":
 		h.PrintColor(message)
-	} else {
+	default:
 		h.PrintPlain(message)
 	}
 }
