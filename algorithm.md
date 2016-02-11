@@ -35,7 +35,6 @@ if there are more than two arguments (hello -m Harry) then
     print a randomly colored message
   else if option is '-f'
     print the message forever
-  else if option is '-h'
   else
     print a plain 'ol message
 ```

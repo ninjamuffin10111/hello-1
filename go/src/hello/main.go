@@ -21,6 +21,8 @@ func main() {
 		h.PrintMulti(message)
 	case "-c":
 		h.PrintColor(message)
+	case "-f":
+		h.PrintFoeva(message)
 	default:
 		h.PrintPlain(message)
 	}
